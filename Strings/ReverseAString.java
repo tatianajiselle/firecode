@@ -6,7 +6,6 @@ public static String reverseString(String str){
         return null;
     }
     
-    String inputString = str;
     char[] c = str.toCharArray();
     StringBuilder sb = new StringBuilder();
     
