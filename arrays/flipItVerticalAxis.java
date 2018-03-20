@@ -1,6 +1,9 @@
 // java.util.* and java.util.streams.* have been imported for this problem.
 // You don't need any other imports.
 
+// complexity: o(m/2 * n) = o(m*n)
+// space: constant 
+
 public static void flipItVerticalAxis(int[][] matrix) {
     for (int i = 0; i <= matrix.length - 1 ; i++){
         for(int j = 0; j <= (matrix[0].length - 1)/2 ; j++){
