@@ -2,17 +2,22 @@
 // space is constant
 
 public static String reverseString(String str){
-    if (str == null){
+    
+    if (str.isEmpty()){
+        return str;
+    }else if (str == null){
         return null;
     }
     
     char[] c = str.toCharArray();
 
-    for (int i = 0 ; i < 0; i++){ // **  swap in array **
+    for (int i = 0 ; i < c.length; i++){ // **  swap in array **
         char temp = c[i];
         c[i] = c[c.length - i];
-        c[c.length -1] = temp;
+        c[c.length - i] = temp;
      }
     
-    return sb.toString();
+    //  String output = new String(c);
+    //  return output;
+    return new String(c);
 }
