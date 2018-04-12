@@ -5,7 +5,7 @@ public ArrayList<Integer> preorderItr(TreeNode root) {
     Stack<TreeNode> stack = new Stack<TreeNode>();
     
     if (root == null){
-        return list;
+        return 0;
     }
     stack.push(root);
     

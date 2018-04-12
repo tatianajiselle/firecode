@@ -26,3 +26,45 @@ public static boolean isStringPalindrome(String str){
     
     return totalOddCount <= 1;
 }
+
+/////// another way to solve it by converting to a char and checking in place:
+
+public static boolean isStringPalindrome(String str){
+    if (str == null){
+        return true;
+    }
+    
+    if (str.isEmpty()){
+        return true;
+    }
+
+    char[] arr = str.toCharArray();
+    
+    for(int i =0; i < arr.length/2; i++){
+        if(arr.length % 2 == 0) {// is even 0 1 2 3
+            if (arr[i] != arr[(arr.length-1)-i]){
+                return false;
+            }
+        }
+        if(arr.length % 2 == 1) {// is odd say its 3 --> 0 1 2
+            if (arr[i] != arr[(arr.length-1)-i]){
+                return false;
+            }
+            if ((arr.length+1)/2 == i){
+                break;
+            }
+        }
+    }
+    return true;
+}
+
+///// another way to recursively solve this
+public static boolean isStringPalindrome(String str){
+    if (str == null) return true;
+    
+    int len = str.length();
+    if (len <= 1) return true;
+    
+    return str.charAt(0) == str.charAt(len - 1) &&
+           isStringPalindrome(str.substring(1, len - 1));
+}
