@@ -68,3 +68,17 @@ public static boolean isStringPalindrome(String str){
     return str.charAt(0) == str.charAt(len - 1) &&
            isStringPalindrome(str.substring(1, len - 1));
 }
+
+// checking value of array index char
+
+public static boolean isStringPalindrome(String str){
+    if (str == null) return true;
+    char[] arr = str.toCharArray();
+    
+    for(int i=0; i < str.length()/2 ; i++){
+        if(arr[i] != arr[(str.length()-1)-i]){
+            return false;
+        }
+    }
+    return true;
+}
