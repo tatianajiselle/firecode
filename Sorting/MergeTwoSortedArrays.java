@@ -29,3 +29,24 @@ public static int[] merge(int[] arrLeft, int[] arrRight){
     
     return arrMerged;
 }
+
+//========================= solution overflow ============================//
+// java.util.* has been imported for this problem.
+// You don't need any other imports.
+
+public static int[] merge(int[] arrLeft, int[] arrRight){
+    int[] ret = new int[arrLeft.length + arrRight.length];
+    int i, j, k;
+    i = j = k = 0;
+    
+    while (i < arrLeft.length && j < arrRight.length)
+        ret[k++] = arrLeft[i] < arrRight[j] ? arrLeft[i++] : arrRight[j++];
+
+    while (i < arrLeft.length)
+        ret[k++] = arrLeft[i++];
+    
+    while (j < arrRight.length)
+        ret[k++] = arrRight[j++];
+    
+    return ret;
+}
