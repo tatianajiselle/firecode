@@ -13,3 +13,15 @@ public static void flipItVerticalAxis(int[][] matrix) {
         }
     }
 }
+
+// ======================= solution overflow ==================== //
+public static void flipItVerticalAxis(int[][] matrix) {
+    
+    for (int i = 0; i < matrix.length; i++) {
+        for (int j = 0, q = matrix[i].length - 1; j < q; j++, q--) {
+            int temp = matrix[i][j];
+            matrix[i][j] = matrix[i][q];
+            matrix[i][q] = temp;
+        }
+    }   
+}
