@@ -1,15 +1,10 @@
 public static int[] merge(int[] arrLeft, int[] arrRight){
-    // Grab the lengths of the left and right arrays
     int lenLeft = arrLeft.length;
     int lenRight = arrRight.length;
     
-    // Create a new output array with the size = sum of the lengths of left and right
-    // arrays
     int[] arrMerged = new int[lenLeft+lenRight];
     
-    // Maintain 3 indices, one for the left array, one for the right and one for 
-    // the merged array
-    
+    // Maintain 3 indices left array/right/merged array
     int indLeft = 0, indRight = 0, indMerged = 0;
     
     // While neither array is empty, run a while loop to merge
