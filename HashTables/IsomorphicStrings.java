@@ -10,12 +10,12 @@ public static boolean isIsomorphic(String input1, String input2) {
         
         for(int i=0; i < input1.length(); i++){
             Character c1 = input1.charAt(i);
-            Integer count1 = hm1.get(c1) == null ? 1 : hm1.get(c1) + 1;
-            hm1.put(c1,count1);
+            Integer count1 = hm1.containsKey(c1) ? hm1.get(c1) : 0;
+            hm1.put(c1,count1+1);
         
             Character c2 = input2.charAt(i);
-            Integer count2 = hm2.get(c2) == null ? 1 : hm2.get(c2) + 1;
-            hm2.put(c2,count2);
+            Integer count2 = hm2.containsKey(c2) ? hm2.get(c2) : 0;
+            hm2.put(c2,count2+1);
             
             if(!hm1.get(c1).equals(hm2.get(c2))) return false;
         }
