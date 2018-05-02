@@ -1,24 +1,18 @@
+// java.util.* and java.util.streams.* have been imported for this problem.
+// You don't need any other imports.
+
 public static int[] selectionSortArray(int[] arr){
-    // Maintain a head pointer, starting at index 0. This pointer will be 
-    // incremented right in an outer for loop. Everything to the left of this
-    // pointer is already sorted. 
-
-    int head;
-    int tail;
-
-    // Outer for loop iterates head from 0 to arr.length - 1
-    for(head=0;head<arr.length-1;head++){
-
-        // A tail pointer, initialized as head+1, moves right inside an inner for loop
-        for(tail = head+1;tail < arr.length;tail++){
-            
-            // if arr[tail] is < arr[head], swap them
-            if(arr[tail] < arr[head]){
-                int temp = arr[head];
-                arr[head] = arr[tail];
-                arr[tail] = temp;
+    
+    for(int i=0;i<arr.length-1;i++){
+        int minElem = i;
+        for(int j=i+1;j<arr.length;j++){
+            if(arr[minElem] > arr[j]){
+                minElem = j;
             }
         }
+        int tmp = arr[i];
+        arr[i] = arr[minElem];
+        arr[minElem] = tmp;
     }
     return arr;
 }
