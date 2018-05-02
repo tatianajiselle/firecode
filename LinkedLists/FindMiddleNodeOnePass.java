@@ -19,8 +19,8 @@ public ListNode findMiddleNode(ListNode head) {
     ListNode head2 = head;
     
     while (head2 != null){
-        head = head.next;
-        head2 = head.next.next.next;
+        head = head.next; // head follows half the nodes of head 2 at all times
+        head2 = head.next.next.next; // head2 is a racer pointer to head
         
     }
     return head;
