@@ -7,5 +7,6 @@ Firecode.io is a reiterating programming tool used to test and prepare for essen
 There are 5 levels to firecode, and 137 java questions.
 I have completed up to level 3.
 
+*Note: Directory "offline" contains questions from CodingBat, not Firecode. I decided to add it to this repository to eliminate excess repositories. 
 
 
