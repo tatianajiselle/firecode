@@ -1,5 +1,7 @@
 public static boolean isAnagram(String input1, String input2) {
     if(input1 == null || input2 == null) return false;
+    if (input1.length() != input2.length()) return false;
+
     int[] charMap = new int[256];
     int count = 0;
     
