@@ -8,10 +8,5 @@ public static int singleNumber(int[] A) {
         numFreq.put(i , count + 1);
     }
     
-    for (int i : A){
-        if (numFreq.get(i) == 1){
-            return i;
-        }
-    }
-    return 0;
+    return numFreq.contains(1) ? true : 0;
 }
