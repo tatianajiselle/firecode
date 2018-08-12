@@ -15,3 +15,15 @@ public static void flipHorizontalAxis(int[][] matrix) {
         }
     }
 }
+
+
+// UPDATEDD SOLUTION
+// swaps in place
+
+if(matrix.length > 1) {
+    for(int i = 0; i < matrix.length / 2; i++) {
+        int[] temp = matrix[i];
+        matrix[i] = matrix[matrix.length - 1 - i];
+        matrix[matrix.length - 1 - i] = temp;
+    }
+}
